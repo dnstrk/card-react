@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/card-react/static/css/main.073c9b0a.css",
+    "main.js": "/card-react/static/js/main.8b02517f.js",
+    "index.html": "/card-react/index.html",
+    "main.073c9b0a.css.map": "/card-react/static/css/main.073c9b0a.css.map",
+    "main.8b02517f.js.map": "/card-react/static/js/main.8b02517f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.8b02517f.js"
+  ]
+}
