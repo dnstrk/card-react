@@ -2,7 +2,8 @@ import "./App.css";
 import { useState } from "react";
 import { useEffect } from "react";
 import UserService from "./API/UserService";
-import Loader from "./components/UI/Loader";
+import Loader from "./components/UI/Loader/Loader";
+import UserList from "./components/UserList";
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -14,28 +15,17 @@ function App() {
 
     async function fetchUsers() {
         setIsUsersLoading(true);
-        setTimeout(async() => {
+        setTimeout(async () => {
             const users = await UserService.getAll();
             setUsers(users);
             setIsUsersLoading(false);
-        }, 1500)
-        
+        }, 1500);
     }
 
     return (
         <div className="App">
             <div style={{ marginBottom: "20px" }}>Test pages</div>
-            {isUsersLoading ? (
-                <Loader />
-            ) : (
-                <div>
-                    {users.map((user) => (
-                        <div key={user.id}>
-                            {user.id}. {user.name}
-                        </div>
-                    ))}
-                </div>
-            )}
+            {isUsersLoading ? <Loader /> : <UserList users={users} />}
         </div>
     );
 }
