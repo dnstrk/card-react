@@ -1,6 +1,17 @@
+body {
+  background-color: rgb(50, 55, 56);
+}
+
 .App {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+
 }

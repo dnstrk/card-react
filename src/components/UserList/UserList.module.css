@@ -1,0 +1,17 @@
+.list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    transition: .3s;
+}
+
+.item-enter {
+    opacity: 0;
+}
+
+.item-exit {
+    opacity: 1;
+}

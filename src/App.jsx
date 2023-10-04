@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import UserService from "./API/UserService";
 import Loader from "./components/UI/Loader/Loader";
-import UserList from "./components/UserList";
+import UserList from "./components/UserList/UserList";
 
 function App() {
     const [users, setUsers] = useState([]);
@@ -23,9 +23,12 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <div style={{ marginBottom: "20px" }}>Test pages</div>
-            {isUsersLoading ? <Loader /> : <UserList users={users} />}
+        <div className="App container">
+            {isUsersLoading ? (
+                <Loader />
+            ) : (
+                <UserList style={{ marginTop: "20px" }} users={users} />
+            )}
         </div>
     );
 }

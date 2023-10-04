@@ -1,0 +1,44 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 10px; */
+
+    width: 25%;
+    padding: 10px 20px;
+    background-color: rgb(94, 88, 82);
+    border-radius: 10px;
+
+    transition: .3s;
+}
+
+.item:hover {
+    box-shadow: 0px 0px 20px #ffffff93;
+    background-color: rgb(107, 103, 100);
+}
+
+.item:hover .person {
+    color: rgba(255, 255, 255, 0.8);
+}
+.item:hover .nick {
+    color: rgb(241, 155, 26);
+}
+
+.person {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+
+    color: rgba(255, 255, 255, 0.541);
+}
+
+.tag {
+}
+
+.nick {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgba(223, 144, 25, 0.603);
+}
+
