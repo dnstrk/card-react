@@ -19,7 +19,7 @@ function App() {
             const users = await UserService.getAll();
             setUsers(users);
             setIsUsersLoading(false);
-        }, 1500);
+        }, 1000);
     }
 
     return (
